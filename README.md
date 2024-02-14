@@ -41,7 +41,7 @@ roslaunch tocabi_controller simulation_with_camera.launch
 ```
 Ctrl+Alt+T (New Terminal)
 ```
-rostopic echo /mujoco_ros_interface/camera/flag
+rostopic echo /mujoco_ros_interface/camera/image
 ```
 Ctrl+Alt+T (New Terminal)
 ```
