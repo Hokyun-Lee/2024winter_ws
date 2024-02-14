@@ -27,6 +27,13 @@ dyros_tocabi_v2/tocabi_controller/launch/simulation_with_camera.launch (신규)
 ```
 
 # 실행방법
+dependency(OpenCV)
+```
+sudo apt update
+sudo apt install libopencv-dev
+```
+
+Build
 ```
 catkin_make
 roslaunch tocabi_controller simulation_with_camera.launch
