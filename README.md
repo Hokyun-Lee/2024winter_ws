@@ -24,6 +24,8 @@ mujoco_ros_sim/mujoco_ros/src/mujoco_rgbd_camera.cpp (신규)
 mujoco_ros_sim/mujoco_ros/include/mujoco_rgbd_camera.hpp (신규)
 dyros_tocabi_v2/tocabi_description/mujoco_model/dyros_tocabi_with_camera.xml (신규)
 dyros_tocabi_v2/tocabi_controller/launch/simulation_with_camera.launch (신규)
+
+camera_pubsub/* (신규, 20240216)
 ```
 
 # 실행방법
@@ -33,17 +35,24 @@ sudo apt update
 sudo apt install libopencv-dev
 ```
 
-Build
+Build & Simulation Start
 ```
 catkin_make
 roslaunch tocabi_controller simulation_with_camera.launch
 (Simulation > Run)
 ```
-Ctrl+Alt+T (New Terminal)
+Ctrl+Alt+T (New Terminal
+camera_pubsub Start
+```
+rosrun camera_pubsub camera_pubsub_node
+```
+
+
+Ctrl+Alt+T (New Terminal)(Optional)
 ```
 rostopic echo /mujoco_ros_interface/camera/image
 ```
-Ctrl+Alt+T (New Terminal)
+Ctrl+Alt+T (New Terminal)(Optional)
 ```
 rostopic pub -1 /mujoco_ros_interface/camera/flag std_msgs/Bool "data: true" 
 ```
