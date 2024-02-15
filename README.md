@@ -41,8 +41,8 @@ catkin_make
 roslaunch tocabi_controller simulation_with_camera.launch
 (Simulation > Run)
 ```
-Ctrl+Alt+T (New Terminal
-camera_pubsub Start
+Ctrl+Alt+T (New Terminal)
+camera_pubsub Start(!!! You have to change folderPath at "camera_pubsub_node.cpp", line 85, in main.
 ```
 rosrun camera_pubsub camera_pubsub_node
 ```
@@ -67,6 +67,9 @@ flag를 publish 할때만 카메라 데이터를 받아오도록 하였음.
 ```
 
 # TODO LIST
-1. tocabi_cc 에서 publisher/subscriber 만들어야함.
+~~1. camera_pub_flag 보내고(publish) camera image 받아와서(subscribe) 폴더에 저장하는 패키지 만듦.(240216)~~
+2. "camera_pubsub/src/camera_pubsub_node.cpp"를 참고하여 tocabi_cc 에서 의도대로 동작하도록 코드 옮겨야함.
+3. "dyros_tocabi_v2/tocabi_description/mujoco_model/dyros_tocabi_with_camera.xml" 에서 카메라 위치 어디로 할지 정하고 옮겨야함.
+
 
 
