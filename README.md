@@ -38,6 +38,8 @@ Build & Simulation Start
 ```
 cd /path/to/ros_workspace/src
 git clone git clone https://github.com/Hokyun-Lee/2024winter_ws.git .
+mv dyros_tocabi_with_camera_hk.xml ./dyros_tocabi_v2/tocabi_description/mujoco_model/
+mv simulation_with_camera.launch ./dyros_tocabi_v2/tocabi_controller/launch/
 cd ..
 catkin_make
 roslaunch tocabi_controller simulation_with_camera.launch
