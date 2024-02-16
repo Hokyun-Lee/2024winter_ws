@@ -55,10 +55,14 @@
         <body name="block">
             <geom size="0.16 0.136 0.1475" pos="0.55 0.1 0.7475" type="box" group="1"/>
         </body>
-
-        <body name="base_link">
+        <body name="virtual_link" pos="0 0 -1">
+            <inertial pos="0.07809 0 0.03985" mass="0.19525" fullinertia="0.101833182 0.072400662 0.144478157 -0.000070812 -0.003831096 0.000079272" />
+            <joint name="virtual_joint" type="free"/>
+        </body>
+        
+        <body name="base_link" pos="0 0 0.92983">
             <camera mode="fixed" name="camera" pos="0.2 0 0" euler="1.57 -1.57 0" fovy="30"/>
-            <joint name="virtual_joint" type="free" limited='false' frictionloss="0" damping="0" stiffness="0" armature="0"/>
+            <!--<joint name="virtual_joint" type="free" limited='false' frictionloss="0" damping="0" stiffness="0" armature="0"/>-->
             <inertial pos="0.07809 0 0.03985" mass="12.19525" fullinertia="0.101833182 0.072400662 0.144478157 -0.000070812 -0.003831096 0.000079272" />
             <geom class="viz" pos="0.11 0 0.02" rgba="0.20313 0.20313 0.20313 1" quat="0.5 0.5 0.5 0.5" mesh="Pelvis_link" />
             <geom size="0.045 0.044" pos="0.11 0 0.039" type="cylinder" class="cls" />
@@ -175,7 +179,7 @@
                 <geom class="cls" size="0.047 0.065 0.005" pos="0 0 -0.081" type="box"/>
                 <geom class="cls" size="0.047 0.005 0.0455" pos="0 0.06 -0.0405" type="box"/>
                 <geom class="cls" size="0.047 0.005 0.0455" pos="0 -0.06 -0.0405" type="box"/>
-
+                
                 <geom class="viz" size="0.095 0.032 0.0435" pos="-0.04 -0.099 -0.038" rgba="0.20313 0.20313 0.20313 1" type="box"/>
                 <geom class="viz" size="0.095 0.032 0.0435" pos="-0.04 0.099 -0.038" rgba="0.20313 0.20313 0.20313 1" type="box"/>
 
@@ -419,12 +423,19 @@
                                 0 0
 								-0.3 -0.3 -1.5 1.27 1 0 1 0"/>
 
-        <key name="side" time="0" qpos ="0 0 0.92683 0.8660254 0 0 0.5 
+        <!-- <key name="front" time="0" qpos ="0.0 0.0 -0.24 0.6 -0.36 0.0 
+								0.0 0.0 -0.24 0.6 -0.36 0.0
+								0 0 0
+								0.3 0.3 1.5 -1.27 -1 0 -1 0
+                                0 0
+								-0.3 -0.3 -1.5 1.27 1 0 1 0"/> -->
+
+        <!-- <key name="side" time="0" qpos ="0 0 0.92683 0.8660254 0 0 0.5 
 								0.0 0.1 -0.45 1.0 -0.55 -0.1 
 								0.0 -0.1 -0.45 1.0 -0.55 0.1
 								0 0 0
 								0.2 0.3 1.5 -1.27 -1 0 -1 0
                                 0 0
-								-0.2 -0.3 -1.5 1.27 1 0 1 0"/>
+								-0.2 -0.3 -1.5 1.27 1 0 1 0"/> -->
     </keyframe>
 </mujoco>
