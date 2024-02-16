@@ -15,16 +15,16 @@ https://github.com/gywhitel/mujoco_RGBD
 
 # 수정사항
 ```
-src/mujoco_ros_sim/mujoco_ros/CMakeLists.txt (수정)
-src/mujoco_ros_sim/mujoco_ros/package.xml (수정)
-src/mujoco_ros_sim/mujoco_ros/src/main.cpp (수정)
+mujoco_ros_sim/mujoco_ros/CMakeLists.txt (수정)
+mujoco_ros_sim/mujoco_ros/package.xml (수정)
+mujoco_ros_sim/mujoco_ros/src/main.cpp (수정)
 
-src/mujoco_ros_sim/mujoco_ros/src/mujoco_rgbd_camera.cpp (신규)
-src/mujoco_ros_sim/mujoco_ros/include/mujoco_rgbd_camera.hpp (신규)
-src/dyros_tocabi_v2/tocabi_description/mujoco_model/dyros_tocabi_with_camera.xml (신규)
-src/dyros_tocabi_v2/tocabi_controller/launch/simulation_with_camera.launch (신규)
+mujoco_ros_sim/mujoco_ros/src/mujoco_rgbd_camera.cpp (신규)
+mujoco_ros_sim/mujoco_ros/include/mujoco_rgbd_camera.hpp (신규)
+dyros_tocabi_with_camera.xml (신규)
+dyros_tocabi_v2/tocabi_controller/launch/simulation_with_camera.launch (신규)
 
-src/camera_pubsub/* (신규, 20240216)
+camera_pubsub/* (신규, 20240216)
 ```
 
 # 실행방법
@@ -36,6 +36,9 @@ sudo apt install libopencv-dev
 
 Build & Simulation Start
 ```
+cd /path/to/ros_workspace/src
+git clone git clone https://github.com/Hokyun-Lee/2024winter_ws.git .
+cd ..
 catkin_make
 roslaunch tocabi_controller simulation_with_camera.launch
 (Simulation > Run)
