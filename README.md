@@ -15,16 +15,16 @@ https://github.com/gywhitel/mujoco_RGBD
 
 # 수정사항
 ```
-mujoco_ros_sim/mujoco_ros/CMakeLists.txt (수정)
-mujoco_ros_sim/mujoco_ros/package.xml (수정)
-mujoco_ros_sim/mujoco_ros/src/main.cpp (수정)
+src/mujoco_ros_sim/mujoco_ros/CMakeLists.txt (수정)
+src/mujoco_ros_sim/mujoco_ros/package.xml (수정)
+src/mujoco_ros_sim/mujoco_ros/src/main.cpp (수정)
 
-mujoco_ros_sim/mujoco_ros/src/mujoco_rgbd_camera.cpp (신규)
-mujoco_ros_sim/mujoco_ros/include/mujoco_rgbd_camera.hpp (신규)
-dyros_tocabi_v2/tocabi_description/mujoco_model/dyros_tocabi_with_camera.xml (신규)
-dyros_tocabi_v2/tocabi_controller/launch/simulation_with_camera.launch (신규)
+src/mujoco_ros_sim/mujoco_ros/src/mujoco_rgbd_camera.cpp (신규)
+src/mujoco_ros_sim/mujoco_ros/include/mujoco_rgbd_camera.hpp (신규)
+src/dyros_tocabi_v2/tocabi_description/mujoco_model/dyros_tocabi_with_camera.xml (신규)
+src/dyros_tocabi_v2/tocabi_controller/launch/simulation_with_camera.launch (신규)
 
-camera_pubsub/* (신규, 20240216)
+src/camera_pubsub/* (신규, 20240216)
 ```
 
 # 실행방법
